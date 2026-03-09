@@ -223,10 +223,10 @@ async function processSkills(skills: Results["skills"]) {
     }
 
     const incoming = Number(skills[0].split("\t")[0]);
-    let newId = Number(lines[i].split("\t")[0]);
     if (lines[i] === undefined) {
       lines.push((id + 1).toString());
     }
+    let newId = Number(lines[i].split("\t")[0]);
 
     // If we hit a new block, back up and treat it like the end of the file
     if (newId > incoming) {
